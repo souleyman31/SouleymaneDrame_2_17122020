@@ -533,6 +533,9 @@ footer div a:hover {
 
 /* MEDIA QUERIES */ /*TROISIEME PARTIE*/
 @media screen and (min-width: 864px) {
+	.container1 {
+		width: 48%;
+	}
 	/********** DEUXIEME SECTION ***/
 	.wrapper1 {
 		margin: 20px;
@@ -586,6 +589,9 @@ footer div a:hover {
 
 /*   MEDIA QUERIES */ /*QUATRIEME PARTIE*/
 @media screen and (min-width: 1025px) {
+	.container1 {
+		width: 42%;
+	}
 	/******* FILTRES*/
 	.filtres p {
 		width: initial;
