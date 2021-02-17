@@ -55,17 +55,13 @@ header {
 	color: #0065fc;
 	font-weight: bold;
 }
-.container .cont1 a {
-	color: #0065fc;
-}
+
 .container_menu:nth-child(1) {
 	color: #0065fc;
-	border-bottom: 3px solid #0065fc;
 	padding-bottom: 10px;
-	flex: 1;
 }
 .container_menu {
-	width: 45%;
+	width: 50%;
 	padding-left: 10%;
 	border-bottom: 3px solid #f2f2f2;
 	display: block;
@@ -100,6 +96,9 @@ main {
 h1 {
 	padding-bottom: 0.8rem;
 }
+form .search {
+	display: none;
+}
 
 form {
 	margin: 2rem auto 0 auto;
@@ -122,7 +121,7 @@ form #city {
 ::placeholder {
 	color: black;
 }
-.search1 {
+form .search1 {
 	display: block;
 	color: #f2f2f2;
 	font-size: 1rem;
@@ -132,11 +131,8 @@ form #city {
 	border: none;
 	transition: 0.2s;
 }
-.search1:hover {
+form .search1:hover {
 	transform: scale(1.1);
-}
-form .search {
-	display: none;
 }
 
 /* 3-FILTRE DE LA RECHERCHE  */
@@ -214,12 +210,13 @@ form .search {
 #hebergements {
 	display: flex;
 	flex-direction: column-reverse;
-	/*justify-content: space-between;*/
-	margin: 20px;
+	margin: 20px 0;
 }
 article {
 	display: flex;
 	flex-direction: column;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 /******************************************* ARTICLE-2 ARTICLE-2 **********/
@@ -229,8 +226,8 @@ article:nth-child(2) {
 	display: flex;
 	flex-direction: column;
 	background-color: #f2f2f2;
-	margin: 0 auto 20px auto;
-	padding: 30px 0;
+	margin-bottom: 20px;
+	padding-top: 30px;
 }
 article:nth-child(2) h2 {
 	padding-left: 10px;
@@ -459,42 +456,35 @@ footer div a:hover {
 /*   MEDIA QUERIES */ /*   MEDIA QUERIES */ /*DEUXIEME PARTIE*/
 @media screen and (min-width: 710px) {
 	/*** HEADER **/
+
 	.logo_reservia {
-		top: 20px;
+		position: initial;
+		padding-left: 20px;
+	}
+	.section_header {
+		position: initial;
+		height: auto;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		padding-top: 20px;
 	}
 	.section_header .container {
 		display: none;
 	}
-	.container1 {
+	.section_header .container1 {
 		display: flex;
-		justify-content: space-between;
-		width: 50%;
-		position: absolute;
-		top: 30px;
-		right: 10px;
-	}
-	.container1 div {
-		margin-left: 10%;
-	}
-	.container1 div:nth-child(1) {
-		margin-left: 0;
+		align-items: center;
 	}
 	.container1 div a {
+		padding-top: 37px;
+		padding-right: 20px;
+		padding-left: 20px;
 		text-decoration: none;
-		color: black;
+		color: #000;
 	}
-	.container1 div:nth-child(1) a {
-		color: #0065fc;
-		border-top: 2px solid #0065fc;
-		padding-top: 2rem;
-		padding-right: 15%;
-		padding-left: 15%;
-	}
-
-	.container1 div:hover a {
-		color: #0065fc;
-		border-top: 2px solid #0065fc;
-		padding-top: 2rem;
+	.container1 div a:hover {
+		border-top: 3px solid #0065fc;
 	}
 	.container1 div:nth-child(3) a {
 		color: #0065fc;
@@ -502,7 +492,7 @@ footer div a:hover {
 	}
 	/********* MAIN_HEADER 1/INTRODUCTION + 2/CHOIX DE RECHERCHE +3/FILTRES  *********/
 
-	.search1 {
+	form .search1 {
 		display: none;
 	}
 	form .search {
@@ -533,9 +523,6 @@ footer div a:hover {
 
 /* MEDIA QUERIES */ /*TROISIEME PARTIE*/
 @media screen and (min-width: 864px) {
-	.container1 {
-		width: 48%;
-	}
 	/********** DEUXIEME SECTION ***/
 	.wrapper1 {
 		margin: 20px;
@@ -589,9 +576,6 @@ footer div a:hover {
 
 /*   MEDIA QUERIES */ /*QUATRIEME PARTIE*/
 @media screen and (min-width: 1025px) {
-	.container1 {
-		width: 42%;
-	}
 	/******* FILTRES*/
 	.filtres p {
 		width: initial;
@@ -602,6 +586,8 @@ footer div a:hover {
 	/**DEUXIEME SECTION*/
 	#hebergements {
 		flex-direction: row;
+		justify-content: space-between;
+		margin: 20px;
 	}
 	article {
 		border-radius: 20px;
@@ -609,6 +595,8 @@ footer div a:hover {
 		height: 850px;
 		max-height: 100%;
 		background-color: #f2f2f2;
+		padding-left: 0;
+		padding-right: 0;
 	}
 
 	/**********************QUERIES ARTICLE-2 ARTICLE-2 ****/
@@ -616,6 +604,8 @@ footer div a:hover {
 		width: 30%;
 		height: auto;
 		background-color: #f2f2f2;
+		padding-left: 0;
+		padding-right: 0;
 	}
 
 	.wrapper2 {
